@@ -61,7 +61,7 @@ p {
 }
 
 .hero {
-  background-image: url("/images/mountain.jpg");
+  background-image: url("/First_Project/images/mountain.jpg");
   background-size: cover;
   height: calc(100vh - 60px);
   color: white;
@@ -113,10 +113,10 @@ p {
   height: 500px;
   width: 500px;
   margin: 0 auto;
-  background-image: url("/images/profile1.jpg");
+  background-image: url("/First_Project/images/profile1.jpg");
 }
 .picture2 {
-  background-image: url("/images/profile2.jpg");
+  background-image: url("/First_Project/images/profile2.jpg");
 }
 
 .services {
