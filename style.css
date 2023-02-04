@@ -8,41 +8,39 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 }
-a {
-  color: white;
-  text-decoration: none;
-  padding: 30px 30px;
-}
+
 header,
 footer {
   background-color: #4e4e4e;
   font-size: 20px;
   color: white;
-  height: 80px;
 }
 footer {
   text-align: center;
-  line-height: 1cm;
+  line-height: 3vh;
+  height: 100%;
 }
-i {
-  margin-right: 20px;
-}
-h1 {
-  font-weight: bold;
-  font-size: 40px;
+header {
+  height: 40px;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: bold;
-  font-size: 25px;
-  text-align: left;
+  font-size: 20px;
+}
+
+h3,
+h4 {
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 p {
-  font-weight: 400;
-  font-size: 20px;
-  text-align: left;
+  font-size: 15px;
 }
 .nav-desk {
   display: none;
@@ -56,7 +54,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 30px;
+  padding: 20px 20px;
   height: 100%;
 }
 
@@ -80,18 +78,27 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.about,
+.offers,
+.disabled,
+.offer {
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+}
+
 .offer {
   display: flex;
-  height: 30px;
-  width: 200px;
+  height: 20px;
+  width: 120px;
   font-size: 15px;
   border: 2px solid white;
   color: white;
-  background-color: Transparent;
+  background-color: transparent;
   justify-content: center;
   align-items: center;
 }
-.offer:hover {
+.offer:active {
   background-color: white;
   color: black;
 }
@@ -102,25 +109,26 @@ p {
   flex-direction: column;
   padding: 30px 30px;
   row-gap: 20px;
+}
+.title {
   text-align: center;
 }
 .picture1,
 .picture2 {
-  position: relative;
   display: block;
   aspect-ratio: 1;
   border-radius: 50%;
-  height: 500px;
-  width: 500px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   background-image: url("/images/profile1.jpg");
+  background-size: 100%;
 }
 .picture2 {
   background-image: url("/images/profile2.jpg");
 }
 
 .services {
-  position: relative;
   background-color: #445c5b;
   color: white;
 }
@@ -128,6 +136,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 .box {
   position: relative;
@@ -136,7 +146,7 @@ p {
   height: 300px;
   width: 300px;
   background-color: white;
-  margin: 30px;
+  margin: 20px;
   color: black;
   justify-content: center;
   align-items: center;
@@ -151,22 +161,14 @@ p {
   left: 0;
   margin: -10px 0 0 -10px;
 }
-.box:hover {
+.box:active {
   animation-name: scale;
   animation-duration: 0.5s;
+  transform: scale(1.05);
 }
-@keyframes scale {
-  from {
-    height: 300px;
-    width: 300px;
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  to {
-    height: 300px;
-    width: 300px;
-  }
+
+.fa-brands {
+  margin-right: 20px;
 }
 
 .footer {
@@ -176,11 +178,30 @@ p {
 /*******DESKTOP******/
 
 @media (min-width: 680px) {
+  header {
+    height: 80px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 30px;
+  }
+
   h1 {
     text-align: start;
   }
-  h2 {
-    padding-bottom: 10px;
+  p {
+    font-size: 20px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .offer {
+    width: 150px;
+    height: 50px;
   }
   footer {
     display: flex;
@@ -194,12 +215,16 @@ p {
     cursor: not-allowed;
   }
 
-  .mod1 {
+  .mod1,
+  .mod2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
     padding: 30px;
+  }
+  .mod2 {
+    text-align: right;
   }
 
   .mod:nth-of-type(even) {
@@ -208,6 +233,8 @@ p {
   .picture1,
   .picture2 {
     margin: 0%;
+    height: 300px;
+    width: 300px;
   }
 
   .box-container {
@@ -218,4 +245,10 @@ p {
   .icons {
     padding: 30px 30px;
   }
+}
+
+.box:hover {
+  animation-name: scale;
+  animation-duration: 0.5s;
+  transform: scale(1.05);
 }
